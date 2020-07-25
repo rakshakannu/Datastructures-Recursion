@@ -1,0 +1,10 @@
+1. many algorithms are based on recursion
+
+- dynamic programming
+- backtracking
+- divide and conquer(binary ssearch, quick sort, merge sort)
+
+2. many roblems inheritantly recursive
+
+- tower of hanoi
+- DFS based traversals
