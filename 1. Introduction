@@ -22,3 +22,19 @@ void fun2(){
 .
 fun1();
 }
+
+// we are going to mainly focus on direct recursion.
+
+NOTE: java shows stackoverflow error for infinite function calls because the space in the stack is over.
+we should make sure that it does not go to a never ending situation. it should be finite.
+we write recursion terminating conditions that helps to have finite recursions.
+
+// typical structure of a recursion function
+
+fun(...)
+{
+base cases
+...
+recursice call(i.e call to the function) with atleast one change in parameter.
+...
+}
