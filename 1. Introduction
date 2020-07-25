@@ -1,0 +1,24 @@
+// a way to write a program where the function calls itself
+// a function is called recursixe if it calls itself directly or indirectly
+
+// direct
+
+void funi(){
+.
+.
+fun1();
+.
+.
+}
+
+// indirect
+
+void fun1(){
+.
+fun2();
+}
+
+void fun2(){
+.
+fun1();
+}
