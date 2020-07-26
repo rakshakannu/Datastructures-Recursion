@@ -1,0 +1,19 @@
+// print N-1 using recursion
+
+class Test{
+  static void print1toN(int n)
+  {
+    if(n==0)
+      RETURN;
+    print1toN(n-1);
+    System.out.print(n+" ");
+}
+
+public static void main(String[] args)
+{
+  int n=4;
+  print1toN(4);
+}
+
+Time: O(n)- theta(n)
+Space: n+1 function calls at any moment, hence O(n)
