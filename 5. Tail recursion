@@ -1,0 +1,58 @@
+// PrintNto1 is faster than Print1toN in modern compilers becasue of tail recursion.
+// a recursion function is called tail recursive if the parent function has nothing more to do when the child function has finished.
+// in simple words, the last thing the function does is a recursive call and nothing else.
+
+// in a modern compilor, the line fun(n-1) is replaced with n=n-1; goto start; and in the first line of function, start: is added. that means, the recursion is removed completely.
+
+// Always go for a tail recursive solution.
+
+// the following code is not tail recursive. convert into a tail recursive function.
+
+void fun(int n)
+{
+  if(n==0)
+    return;
+  
+  fun(n-1);
+  print(n);
+}
+
+-> below is the equivalent tail recursive
+
+// initially pass k=1
+void fun(int n, int k)
+{
+  if(n==0)
+    return;
+  print(k);
+  fun(n-1,k+1);
+}
+
+// can we convert every non tail recursive function to tail recursive?
+ans: we cannot.
+
+// merge sort is not, quick sort is tail recursive. that is one of the reasons, quick sort is faster than merge sort.
+
+// preorder and inorder traversal are tail recursive while post order is not. always prefer inorder. or preorder, because they are faster.
+// ex: sum of all nodes in a tree - use inorder, or preorder over postorder.
+
+// another question
+// is the following tail function recursive
+
+int fact(int n)
+{
+  if(n==0||n==1)
+    return 1;
+  return n*fact(n-1);
+}
+
+ans: no.
+
+// tail recursive equivalent
+
+int fact(int n, int k)
+{
+  if(n==0||n==1)
+    return k;
+  return fact(n-1, k*n);
+}
