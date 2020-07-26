@@ -1,0 +1,20 @@
+// use direct formula
+// we have to define getsum(n)
+
+class test{
+  public static int getsum(int n)
+  {
+  if(n==0)
+    return 0;
+  return n + getsum(n-1);
+  }
+  
+  public static void main(String[] args)
+  {
+    int n=5;
+    getsum(5);
+  }
+}
+
+time: theta(n)
+space: theta(n)
