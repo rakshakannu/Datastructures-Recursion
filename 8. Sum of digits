@@ -1,0 +1,11 @@
+// we need to find the sum of digits using recursion.
+
+APPROACH: THINK OF A SOLUTION THAT HAS A SMALLER SUB PROBLEM.
+
+int fun(int n)
+{
+  if(n<10)
+    return n;
+    
+  return fun(n/10)+n%10;
+}
