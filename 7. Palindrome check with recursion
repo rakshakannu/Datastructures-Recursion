@@ -1,4 +1,24 @@
-// base cases
-if n=0 or n=1 return true
+// palindrome - if we reverse the string, it should be the same
+// recursion means finding solution for the smaller problems
+hance method will be:
+first and last characters should be same and the inner string should be a palindrome. that is how we will use recursion.
 
-( didn't understand)
+// base cases
+if n=0 or n=1 return true // these are the two main corner cases.
+
+// we create a boolean function call isPalindrome
+// we are going to use two variables start and end and recursivley call
+
+boolean isPalindrome(String str, int start, int end)
+{
+if(Start>=end)
+  return true;
+  
+return(ischarAt(start)==ischarAt(end) && isPalindrome(str, start+1,end -1);
+}
+
+// note that the && operator works in a shrt circuit way.if only the first condition becomes true in the recursive statement, then only its going to male a recursive call
+otherwise it is going to return false. this is called short circuiting which happens in both c++ and java.
+
+// time: theta(n)/ O(n)
+// space: recursive call of n-2, hence it is around n/2 recursive calls in the function call stack.
