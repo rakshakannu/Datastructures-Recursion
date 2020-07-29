@@ -1,4 +1,5 @@
 // print N-1 using recursion
+// use static while creating a function if you dont want to create an object before calling it.
 
 class Test{
   static void print1toN(int n)
