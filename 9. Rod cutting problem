@@ -1,1 +1,4 @@
 // very important problem and a tough problem
+// given a rope of length n you need to find maximum no of pieces such that length of every peice is in set {a,b,c} FROM THE GIVEN THREE VALUES a,b,c.
+
+
