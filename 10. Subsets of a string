@@ -1,0 +1,62 @@
+// given a string, retrieve all the subsets of it using recursion
+// the sub strings can be in any order
+
+// begin with an empty string and one by one add the characters
+// we start with an empty string and we build the recursion tree
+
+// there are two children of every node hence we are doing two recursive calls
+
+void PrintSub(iString str, String curr=" ", index=0)
+{
+  if(index== Str.length)
+    System.out.print(curr+" ");
+  
+  printSub(str, curr, index+1);
+  printSub(str, curr+index, index+1);
+}
+
+// GFG CODE
+
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+class GFG { 
+  
+// str : Stores input string  
+// curr : Stores current subset  
+// index : Index in current subset, curr  
+static void powerSet(String str, int index,  
+            String curr)  
+      
+{  
+    int n = str.length();  
+  
+    // base case  
+    if (index == n) 
+    {  
+        System.out.println(curr); 
+        return;  
+    }  
+  
+    // Two cases for every character  
+    // (i) We consider the character  
+    // as part of current subset  
+    // (ii) We do not consider current  
+    // character as part of current  
+    // subset  
+    powerSet(str, index + 1, curr + str.charAt(index));  
+    powerSet(str, index + 1, curr); 
+  
+}  
+  
+// Driver code  
+public static void main(String[] args)  
+{ 
+    String str = "abc";  
+        int index = 0; 
+        String curr=""; 
+    powerSet(str,index,curr);  
+  
+    } 
+}
