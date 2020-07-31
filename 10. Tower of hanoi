@@ -1,0 +1,5 @@
+// we need to move n number of disks from tower A to tower B by following certain conditions.
+// tower c should have the disls in the same order as tower A
+// first we move n-1 disks from A to B using C as auxillary tower
+// then we move bottom most disk in tower A to tower C
+// then we move the n-1 disks from tower B to Tower C using tower A as auxillary tower
