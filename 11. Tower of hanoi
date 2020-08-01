@@ -31,3 +31,5 @@ class GFG
         towerOfHanoi(n, 'A', 'C', 'B');  // A, B and C are names of rods 
     } 
 }
+
+// counting no of moves for n number of disks = 2^n - 1. check video for explanation.
