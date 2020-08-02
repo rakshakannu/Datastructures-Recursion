@@ -1,0 +1,34 @@
+// there are n people standing in a circle, a value K will be given and the rule is that atarting from the 0th position, the Kth person will get killed. and the same process will
+continue from the next person that got killed.
+// we need to take 2 parameters, n and k
+// n is going to become n-1 after every recursive call, but k will remain the same
+// we will stop when n becomes 1 and whatever be the value of K, that one left out person will kill himself, hence the output will be zero
+
+int jos(int n, int k)
+{
+  if(n==1)
+    return 0;
+  
+  else
+    return (jos(n-1,k)+k)%n;
+}
+
+time: theta(n)
+
+
+// variation of josephus problem
+// the position of the person who has the gun begins with 1 instead of 0
+
+int jos(int n, int k)
+{
+  if(n==1)
+    return 0;
+  
+  else
+    return (jos(n-1,k)+k)%n;
+}
+
+int myJos(int n, int k)
+{
+  return jos(n+k)+1;   // just add 1 to make the necessary changes.
+}
